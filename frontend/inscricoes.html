@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrições - SIGE</title>
+    <script src="app.js" defer></script>
+</head>
+
+<body data-pagina="inscricoes">
+    <header>
+        <h1>SIGE - Gerenciador de Eventos</h1>
+        <nav>
+            <a href="index.html">Painel Geral</a> |
+            <a href="eventos.html">Eventos</a> |
+            <a href="participantes.html">Participantes</a> |
+            <a href="inscricoes.html"><strong>Inscrições</strong></a> |
+            <a href="relatorios.html">Relatórios</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <p id="mensagem-status"></p>
+
+        <section>
+            <form id="form-inscricao">
+                <fieldset>
+                    <legend id="titulo-form-inscricao">Registrar Inscrição</legend>
+
+                    <p>
+                        <label for="inscricao-evento">Evento</label><br>
+                        <select id="inscricao-evento" name="id_evento" required>
+                            <option value="">Carregando eventos...</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="inscricao-turno">Turno do evento</label><br>
+                        <select id="inscricao-turno" name="turno" required>
+                            <option value="">Selecione um evento primeiro</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="inscricao-participante">Participante</label><br>
+                        <select id="inscricao-participante" name="id_participante" required>
+                            <option value="">Carregando participantes...</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <button type="submit" id="btn-registrar-inscricao">Registrar inscrição</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+
+        <hr>
+
+        <section aria-labelledby="titulo-lista-inscricoes">
+            <h2 id="titulo-lista-inscricoes">Inscrições Realizadas</h2>
+
+            <form id="form-filtro-inscricoes" role="search">
+                <p>
+                    <label for="filtro-evento">Filtrar por evento</label><br>
+                    <select id="filtro-evento" name="id_evento">
+                        <option value="">Todos os eventos</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="filtro-participante">Filtrar por participante</label><br>
+                    <select id="filtro-participante" name="id_participante">
+                        <option value="">Todos os participantes</option>
+                    </select>
+                </p>
+
+                <p>
+                    <button type="submit">Filtrar</button>
+                    <button type="button" id="btn-limpar-filtro-inscricoes">Limpar</button>
+                </p>
+            </form>
+
+            <table border="1" cellpadding="6" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Evento</th>
+                        <th scope="col">Data do Evento</th>
+                        <th scope="col">Turno</th>
+                        <th scope="col">Participante</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">Data da Inscrição</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-inscricoes">
+                    <tr>
+                        <td colspan="9">Carregando inscrições...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

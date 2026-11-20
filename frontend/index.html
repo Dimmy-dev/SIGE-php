@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Geral - SIGE</title>
+    <script src="app.js" defer></script>
+</head>
+
+<body data-pagina="dashboard">
+    <header>
+        <h1>SIGE - Gerenciador de Eventos</h1>
+        <nav>
+            <a href="index.html"><strong>Painel Geral</strong></a> |
+            <a href="eventos.html">Eventos</a> |
+            <a href="participantes.html">Participantes</a> |
+            <a href="inscricoes.html">Inscrições</a> |
+            <a href="relatorios.html">Relatórios</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <p id="mensagem-status"></p>
+
+        <section>
+            <h2>Resumo Geral</h2>
+            <table border="1" cellpadding="6" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th scope="col">Total de Eventos</th>
+                        <th scope="col">Total de Participantes</th>
+                        <th scope="col">Total de Inscrições</th>
+                        <th scope="col">Total de Vagas Ofertadas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="resumo-geral">
+                        <td id="kpi-eventos">-</td>
+                        <td id="kpi-participantes">-</td>
+                        <td id="kpi-inscricoes">-</td>
+                        <td id="kpi-vagas">-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section aria-labelledby="titulo-ocupacao">
+            <h2 id="titulo-ocupacao">Ocupação por Evento</h2>
+            <table border="1" cellpadding="6" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th scope="col">Evento</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Turno</th>
+                        <th scope="col">Vagas</th>
+                        <th scope="col">Inscritos</th>
+                        <th scope="col">Restantes</th>
+                        <th scope="col">Ocupação</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-ocupacao">
+                    <tr>
+                        <td colspan="7">Carregando dados de ocupação...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

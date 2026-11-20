@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios - SIGE</title>
+    <script src="app.js" defer></script>
+</head>
+
+<body data-pagina="relatorios">
+    <header>
+        <h1>SIGE - Gerenciador de Eventos</h1>
+        <nav>
+            <a href="index.html">Painel Geral</a> |
+            <a href="eventos.html">Eventos</a> |
+            <a href="participantes.html">Participantes</a> |
+            <a href="inscricoes.html">Inscrições</a> |
+            <a href="relatorios.html"><strong>Relatórios</strong></a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <p id="mensagem-status"></p>
+
+        <section>
+            <h2 id="titulo-relatorio-inscritos">Lista de Inscritos por Evento</h2>
+
+            <form id="form-relatorio-inscritos">
+                <p>
+                    <label for="relatorio-evento">Selecione o evento</label><br>
+                    <select id="relatorio-evento" name="id_evento" required>
+                        <option value="">Carregando eventos...</option>
+                    </select>
+                    <button type="submit">Gerar lista</button>
+                    <button type="button" id="btn-imprimir-relatorio">Imprimir página</button>
+                </p>
+            </form>
+
+            <table border="1" cellpadding="6" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th scope="col">Inscrição</th>
+                        <th scope="col">Turno</th>
+                        <th scope="col">Participante</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">Data da Inscrição</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-relatorio-inscritos">
+                    <tr>
+                        <td colspan="7">Selecione um evento para visualizar os inscritos.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section aria-labelledby="titulo-relatorio-ocupacao">
+            <h2 id="titulo-relatorio-ocupacao">Ocupação Geral de Vagas</h2>
+            <table border="1" cellpadding="6" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th scope="col">Evento</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Turno</th>
+                        <th scope="col">Vagas</th>
+                        <th scope="col">Inscritos</th>
+                        <th scope="col">Restantes</th>
+                        <th scope="col">Ocupação</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-ocupacao">
+                    <tr>
+                        <td colspan="7">Carregando ocupação...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>
