@@ -2,7 +2,6 @@
 
 Documentação técnica do Sistema Web de Gerenciamento de Eventos Acadêmicos (SIGE). O backend foi separado do frontend para permitir que as telas projetadas no Figma consumam os dados via JSON sem misturar HTML com regra de negócio.
 
-> **Para estudar ou apresentar o projeto**: acesse o [Roteiro de Apresentação](estudo/00-roteiro-apresentacao.md) com a explicação resumida arquivo por arquivo.
 
 ## Mapa de arquivos
 
